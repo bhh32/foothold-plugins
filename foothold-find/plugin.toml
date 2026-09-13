@@ -1,0 +1,13 @@
+name = "find"
+description = "Search for files by name"
+icon = "system-search"
+bin = "find"
+
+[query]
+prefixes = ["find"]
+isolate = ["find"]
+
+[[usage]
+prefix = "find"
+example = "find report.odt"
+description = "Search files by name on the filesystem"

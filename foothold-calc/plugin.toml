@@ -1,0 +1,14 @@
+name = "calculator"
+description = "Arithmetic, percent, mod"
+icon = "accessories-calculator"
+bin = "calc"
+
+[query]
+starts_with = ["=", "(", "-", "."]
+digits = true
+isolate = ["="]
+
+[[usage]]
+prefix = "="
+example = "= 15%of240"
+description = "Arithmetic, percent, mod. Bare sums work too"

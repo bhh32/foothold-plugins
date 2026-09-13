@@ -1,0 +1,32 @@
+set shell := ["bash", "-euo", "pipefail", "-c"]
+
+name := "find"
+prefix := env_var_or_default("PREFIX", env_var("HOME") / ".local")
+plugindir := prefix / "share" / "foothold" / "plugins" / name
+
+_default:
+    @just --list
+
+check:
+    cargo fmt --all --check
+    cargo clippy --all-targets -- -D warnings
+    cargo test
+
+dev:
+    cargo build
+    install -Dm755 target/debug/{{name}} {{plugindir}}/{{name}}
+    install -Dm644 plugin.toml {{plugindir}}/plugin.toml
+    @echo "installed to {{plugindir}}"
+
+install:
+    cargo build --release
+    install -Dm755 target/release/{{name}} {{plugindir}}/{{name}}
+    install -Dm644 plugin.toml {{plugindir}}/plugin.toml
+    @echo "installed to {{plugindir}}"
+
+uninstall:
+    rm -rf {{plugindir}}
+
+# Drive the plugin without the launcher
+try query:
+    @printf '{"Search":"%s"}\n"Exit"\n' '{{query}}' | cargo run --quiet

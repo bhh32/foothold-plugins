@@ -1,0 +1,13 @@
+name = "weather"
+description = "Get the weather for a location"
+icon = "weather-stages"
+bin = "weather"
+
+[query]
+prefixes = ["weather"]
+isolate = ["weather"]
+
+[[usage]]
+prefix = "weather"
+example = "weather Seattle, WA, USA"
+description = "Get the local weather for a location"

@@ -1,0 +1,12 @@
+name = "web"
+description = "Open a search or a URL in the browser"
+icon = "internet-web-browser"
+bin = "web"
+
+[query]
+always = true
+
+[[usage]]
+prefix = ""
+example = "ddg rust traits"
+description = "A keyword from plugins/web.toml, then terms"

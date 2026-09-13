@@ -1,0 +1,13 @@
+name = "terminal"
+description = "Run a command in a terminal"
+icon = "utilities-terminal"
+bin = "terminal"
+
+[query]
+prefixes = ["sh"]
+isolate = ["sh"]
+
+[[usage]]
+prefix = "sh"
+example = "sh htop"
+description = "Run a command in a terminal"

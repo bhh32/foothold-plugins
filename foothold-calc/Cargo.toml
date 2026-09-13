@@ -1,0 +1,15 @@
+[package]
+name = "foothold-calc"
+version = "0.1.0"
+authors = ["Bryan Hyland <bryan.hyland32@gmail.com>"]
+edition = "2024"
+license = "MIT"
+
+[[bin]]
+name = "calc"
+path = "src/main.rs"
+
+[dependencies]
+fh-ipc = { git = "https://github.com/bhh32/foothold" }
+fh-plugin = { git = "https://github.com/bhh32/foothold" }
+thiserror = "2"

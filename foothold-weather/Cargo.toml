@@ -1,0 +1,20 @@
+[package]
+name = "foothold-weather"
+version = "0.1.0"
+authors = ["Bryan Hyland <bryan.hyland32@gmail.com>"]
+edition = "2024"
+license = "MIT"
+
+[[bin]]
+name = "weather"
+path = "src/main.rs"
+
+[dependencies]
+fh-ipc = { git = "https://github.com/bhh32/foothold" }
+fh-paths = { git = "https://github.com/bhh32/foothold" }
+fh-plugin = { git = "https://github.com/bhh32/foothold" }
+reqwest = { version = "0.13.5", features = ["blocking", "json", "query"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.9"
+tracing = "0.1"
