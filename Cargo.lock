@@ -241,7 +241,7 @@ checksum = "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
 [[package]]
 name = "fh-ipc"
 version = "0.1.0"
-source = "git+https://github.com/bhh32/foothold#2628a24957b578370f50beae79b44da2ccb16226"
+source = "git+https://github.com/bhh32/foothold#07f4628cc464e487a398dc3e60b0fd965ea5383f"
 dependencies = [
  "serde",
  "serde_json",
@@ -251,12 +251,12 @@ dependencies = [
 [[package]]
 name = "fh-paths"
 version = "0.1.0"
-source = "git+https://github.com/bhh32/foothold#2628a24957b578370f50beae79b44da2ccb16226"
+source = "git+https://github.com/bhh32/foothold#07f4628cc464e487a398dc3e60b0fd965ea5383f"
 
 [[package]]
 name = "fh-plugin"
 version = "0.1.0"
-source = "git+https://github.com/bhh32/foothold#2628a24957b578370f50beae79b44da2ccb16226"
+source = "git+https://github.com/bhh32/foothold#07f4628cc464e487a398dc3e60b0fd965ea5383f"
 dependencies = [
  "fh-ipc",
  "fh-paths",
