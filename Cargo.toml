@@ -1,0 +1,19 @@
+[workspace]
+resolver = "3"
+
+members = [
+  "foothold-calc",
+  "foothold-find",
+  "foothold-terminal",
+  "foothold-weather",
+  "foothold-web"
+]
+
+default-members = [
+  "foothold-calc",
+  "foothold-find",
+  "foothold-terminal",
+  "foothold-weather",
+  "foothold-web"
+]
+

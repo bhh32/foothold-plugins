@@ -14,13 +14,13 @@ check:
 
 dev:
     cargo build
-    install -Dm755 target/debug/{{name}} {{plugindir}}/{{name}}
+    install -Dm755 ../target/debug/{{name}} {{plugindir}}/{{name}}
     install -Dm644 plugin.toml {{plugindir}}/plugin.toml
     @echo "installed to {{plugindir}}"
 
 install:
     cargo build --release
-    install -Dm755 target/release/{{name}} {{plugindir}}/{{name}}
+    install -Dm755 ../target/release/{{name}} {{plugindir}}/{{name}}
     install -Dm644 plugin.toml {{plugindir}}/plugin.toml
     @echo "installed to {{plugindir}}"
 
